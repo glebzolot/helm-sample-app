@@ -1,0 +1,30 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: goapp
+  namespace: prod
+  selfLink: /api/v1/namespaces/prod/services/goapp
+  uid: 82d29007-99f8-4ac6-bcd6-1252b357a2c6
+  resourceVersion: '295601'
+  creationTimestamp: '2020-07-21T15:00:05Z'
+  labels:
+    io.codefresh.auto-generated: 31fed275-1410-4ca8-9f6f-65d8a0c552b7
+    io.codefresh.generated-at: '1595343605505'
+spec:
+  ports:
+    - name: http1
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+      nodePort: 30438
+  selector:
+    app: goapp
+  clusterIP: 10.100.215.123
+  type: LoadBalancer
+  sessionAffinity: None
+  externalTrafficPolicy: Cluster
+status:
+  loadBalancer:
+    ingress:
+      - hostname: >-
+          a82d2900799f84ac6bcd61252b357a2c-1571623628.us-east-2.elb.amazonaws.com
