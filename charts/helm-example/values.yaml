@@ -4,9 +4,13 @@
 replicaCount: 1
 image:
   pullPolicy: IfNotPresent
+<<<<<<< HEAD
   repository: r.cfcr.io/guysaltoncf/helm-sample-app-go
   tag: latest
   pullSecret: cfcr
+=======
+  repository: r.cfcr.io/anna-codefresh/helm-sample-app-go
+>>>>>>> ebe327bc13720d5ae998c04b77b7583fc4581756
 service:
   name: my-example-helm-app
   type: LoadBalancer
